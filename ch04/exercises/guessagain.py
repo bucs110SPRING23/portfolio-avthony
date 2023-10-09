@@ -1,6 +1,6 @@
 import random
 
-number = random.randrange(1,11)
+number = random.randint(1,10)
 
 for i in range(3):
     guess = int(input("please enter a guess for the number: "))
