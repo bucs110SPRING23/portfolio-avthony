@@ -40,29 +40,32 @@ while True:
         if is_in_circle1 == True:
             pygame.draw.circle(screen, "yellow", (x1,y1),5)
             pygame.display.flip()
+            pygame.time.wait(250)
             player1_score = player1_score + 1
         else:
             pygame.draw.circle(screen, "blue", (x1,y1),5)
             pygame.display.flip()
+            pygame.time.wait(250)
+            
         if is_in_circle2 == True:
             pygame.draw.circle(screen, "pink", (x2,y2),5)
             pygame.display.flip()
-            pygame.time.wait(500)
+            pygame.time.wait(1000)
             player2_score = player2_score + 1
         else:
             pygame.draw.circle(screen, "purple", (x2,y2),5)
             pygame.display.flip()
-            pygame.time.wait(500)
+            pygame.time.wait(1000)
         
     if player1_score == player2_score:
         font = pygame.font.Font(None, 48)
         text = font.render("The players tied!", True, "white")
-        screen.blit(text, (250, 250))
+        screen.blit(text, (100, 250))
         
     elif player1_score > player2_score:
         font = pygame.font.Font(None, 48)
         text = font.render("Player 1 wins!", True, "white")
-        screen.blit(text, (250, 250))
+        screen.blit(text, (100, 250))
         
     elif player1_score < player2_score:
         font = pygame.font.Font(None, 48)
